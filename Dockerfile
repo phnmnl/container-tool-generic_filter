@@ -51,28 +51,18 @@ LABEL version="0.1"
 ################################################################################
 ### install core scripts
 
-# init. WORKDIR
-RUN [ "mkdir", "-p", "/usr/local/src/scripts/" ]
-
-# set WORKDIR
-WORKDIR "/usr/local/src/scripts/"
-
 # get script using `git clone` command
-RUN git clone https://github.com/workflow4metabolomics/tool-generic_filter.git && \
-  cd tool-generic_filter && \
-  git checkout tags/${TOOL_VERSION} && \
-  git submodule update --init --recursive
-  
+RUN git clone --recurse-submodules --single-branch -b ${TOOL_VERSION} https://github.com/workflow4metabolomics/tool-generic_filter.git /files/tool-generic_filter
+ 
 # set authorizations
-RUN ["chmod", "a+x", "/usr/local/src/scripts/tool-generic_filter/filter_wrap.R"]
+RUN ["chmod", "a+x", "/files/tool-generic_filter/filter_wrap.R"]
 
 # make tool accessible through PATH
-ENV PATH = $PATH:/usr/local/src/scripts/tool-generic_filter
+ENV PATH = $PATH:/files/tool-generic_filter
 
 ################################################################################
 ### Define script ENTRYPOINT or container CMD
-#ENTRYPOINT ["/usr/local/src/scripts/tool-generic_filter/tool-filter_wrap.R"]
-#CMD ["Rscript", "filter_wrap.R"]
+ENTRYPOINT ["/files/tool-generic_filter/filter_wrap.R"]
 
 ### [END]
 ################################################################################
