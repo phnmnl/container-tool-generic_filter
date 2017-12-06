@@ -16,7 +16,7 @@ FROM ubuntu:16.04
 MAINTAINER PhenoMeNal-H2020 Project ( phenomenal-h2020-users@googlegroups.com )
 
 ENV TOOL_NAME=tool-generic_filter
-ENV TOOL_VERSION="release_2016.03.03"
+ENV TOOL_VERSION="phenomenal_2017.12.06.a"
 ENV CONTAINER_VERSION=0.2
 ENV CONTAINER_GITHUB=https://github.com/phnmnl/container-tool-generic_filter
 
