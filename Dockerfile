@@ -13,7 +13,7 @@ FROM ubuntu:16.04
 
 ################################################################################
 ### set author
-MAINTAINER Nils Paulhe <nils.paulhe@inra.fr>
+MAINTAINER PhenoMeNal-H2020 Project ( phenomenal-h2020-users@googlegroups.com )
 
 ################################################################################
 ### install third part tools: r-base, system libraries and Git
