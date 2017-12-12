@@ -3,7 +3,7 @@
 ![Logo](w4m.png)
 
 # W4M - Generic Filter
-Version: 2017.12.06.a
+Version: 2017.12.12
 
 ## Short description
 
