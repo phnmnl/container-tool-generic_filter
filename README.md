@@ -16,7 +16,11 @@ Allows to remove all samples and/or variables corresponding to specific values r
 ## Description
 
 A Galaxy module from the [Workflow4metabolomics](http://workflow4metabolomics.org) infrastructure. 
-For further informations please refer the for project's [GitHub page](https://github.com/workflow4metabolomics/tool-generic_filter). 
+
+The generic filter tool allows you to remove rows in sample dataset or variable dataset. You select the rows you want to remove by specifying a column to check (column name) and a value or a numerical range to satisfy.
+With this filter, it is also possible to remove NA values.
+
+For further informations please refer to the project's [GitHub page](https://github.com/workflow4metabolomics/tool-generic_filter). 
 
 ## Key features
 
